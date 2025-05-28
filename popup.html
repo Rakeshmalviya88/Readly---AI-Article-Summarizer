@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Readly AI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      min-width: 500px;
+      min-height: 300px;
+      padding: 20px;
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-left: 4px solid #183768;
+      padding-left: 10px;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 18px;
+      background-color: #142d57;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #2c4885;
+      transform: translateY(-1px);
+    }
+
+    #copy-btn {
+      background-color: #05972c;
+    }
+
+    #copy-btn:hover {
+      background-color: #2e8b57;
+    }
+
+    #summary-type {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 220px;
+      font-size: 15px;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      min-height: 150px;
+      max-height: 400px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    #result ul {
+      padding-left: 25px;
+    }
+
+    #result li {
+      margin-bottom: 10px;
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  
+  </style>
+</head>
+
+<body>
+  <h2>Readly AI</h2>
+
+  <div class="options">
+    <select id="summary-type">
+      <option value="brief">Brief Summary</option>
+      <option value="detailed">Detailed Summary</option>
+      <option value="bullets">Bullet Points</option>
+    </select>
+    <button id="summarize">Summarize This Page</button>
+    <button id="copy-btn">Copy Summary</button>
+  </div>
+
+  <div id="result">
+    Select a summary type and click 'Summarize This Page' to generate a
+    summary.
+  </div>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
