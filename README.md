@@ -3,8 +3,8 @@ Readly is a lightweight Chrome extension that enhances your reading experience b
 Features
 - AI-powered summarization using Gemini API
 - Supports three summary formats:
-    > Brief – for quick insights
-    > Detailed – for in-depth understanding
-    > Bullet-Point – for easy readability
+    - Brief – for quick insights
+    - Detailed – for in-depth understanding
+    - Bullet-Point – for easy readability
 - Instant extraction and summarization from the active tab
 - Clean UI for distraction-free reading
